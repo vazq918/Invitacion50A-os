@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación 50 Años - Marlene Avendaño</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+            color: #000;
+            background-image: url('img/fondo.png');
+            background-size: cover;
+            background-position: center;
+            animation: fadeIn 2s ease-in;
+        }
+        .container {
+            width: 90%;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 15px rgb(248, 246, 246);
+            border-radius: 10px;
+        }
+        h1, h2, h3, p {
+            text-align: center;
+            color: #B8860B;
+        }
+        h1.large {
+            font-size: 36px;
+            font-weight: bold;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        h1.very-large {
+            font-size: 40px;
+            font-weight: bold;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .gallery img {
+            width: 120px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid #000;
+            animation: fadeIn 2s ease-in;
+        }
+        .event-details, .dress-code, .gift-registry {
+            margin: 20px auto;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            color: #B8860B;
+            position: relative;
+            border: 2px solid #B8860B;
+            animation: slideIn 1.5s ease-in-out;
+        }
+        .icon-placeholder {
+            width: 100px;
+            height: 100px;
+            margin: 10px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon-placeholder img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .rsvp {
+            margin: 20px 0;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const pase = urlParams.get('pase') || '1';
+            document.getElementById('pase-info').textContent = `Invitación para ${pase} persona(s).`;
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="large">Ha llegado la edad de oro</h1>
+        <h1 class="very-large">MARLENE</h1>
+        <h1 class="large">50 años de experiencia</h1>
+        <h1>18250 días de vida, una mujer increíble</h1>
+        <h1>Mi esposo y dos hijos maravillosos</h1> 
+        <h1>Familia y mejores amigos</h1>
+        <h1>Una vida bendecida y... </h1>
+        <h1>lo mejor, tomada de la mano de Dios</h1> 
+        <h1>Acompañáme a celebrar este día especial.</h1>
+        <h1 class="very-large">¡Es mi cumpleaños!</h1>
+        <div class="gallery">
+            <img src="imagen1.jpg" alt="Imagen 1">
+        </div>
+        
+        <div class="event-details">
+            <h3>Detalles del Evento</h3>
+            <h2>29 de Marzo del 2025</h2>
+            <div class="icon-placeholder"><img src="img/papel-picado.png" alt="Ícono de fiesta"></div>
+            <p><strong>Recepción:</strong> Domo del Centro Recreativo del IMSS - 03:00 P.M.</p>
+        </div>
+        
+        <div class="dress-code">
+            <h3>Código de Vestimenta</h3>
+            <div class="icon-placeholder"><img src="img/codigo-de-vestimenta.png" alt="Código de vestimenta"></div>
+            <p>Formal - Color Rojo</p>
+        </div>
+        
+        <div class="rsvp">
+            <h3>Confirmación de Asistencia</h3>
+            <p id="pase-info"></p>
+            <p id="pase-info"></p>
+        </div>
+    </div>
+</body>
+</html>
+
